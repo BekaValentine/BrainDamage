@@ -25,6 +25,8 @@ bd-delete-attachment :: NodeId -> FilePath -> IO ()
 
 bd-make-parent-child :: NodeId -> NodeId -> IO ParentChildId
 bd-delete-parent-child :: NodeId -> NodeId -> ParentChildId -> IO ()
+bd-list-children :: NodeId -> IO [NodeId]
+bd-list-parents :: NodeId -> IO [NodeId]
 bd-list-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> IO [MetaDataKey]
 bd-get-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> IO Text
 bd-set-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> Text -> IO ()
@@ -32,6 +34,7 @@ bd-delete-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaData
 
 bd-make-friends :: NodeId -> NodeId -> IO FriendsId
 bd-delete-friends :: NodeId -> NodeId -> FriendsId -> IO ()
+bd-list-friends :: NodeId -> IO [NodeId]
 bd-list-friendsd-metadata :: NodeId -> NodeId -> FriendsId -> IO [MetaDataKey]
 bd-get-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO Text
 bd-set-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> Text -> IO ()
