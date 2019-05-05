@@ -17,9 +17,10 @@ set-node-note :: NodeId -> Text -> IO ()
 list-metadata :: NodeId -> IO [MetaDataKey]
 get-metadata :: NodeId -> MetaDataKey -> IO Text
 set-metadata :: NodeId -> MetaDataKey -> Text -> IO ()
-delete-metadata ::NodeId -> MetaDataKey -> IO ()
+delete-metadata :: NodeId -> MetaDataKey -> IO ()
 
 add-attachment :: NodeId -> FilePath -> IO ()
+link-attachment :: NodeId -> FilePath -> IO ()
 delete-attachment :: NodeId -> FilePath -> IO ()
 
 make-parent-child :: NodeId -> NodeId -> IO ParentChildId
