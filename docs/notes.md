@@ -10,9 +10,9 @@ Each item gets a directory. Content goes in `content.<extension>`, title and oth
 bd-make-node :: Name -> IO NodeId
 bd-delete-node :: NodeId -> IO ()
 
-bd-get-node-note :: NodeId -> IO Text
-bd-delete-node-note :: NodeId -> IO ()
-bd-set-node-note :: NodeId -> Text -> IO ()
+bd-get-note :: NodeId -> IO Text
+bd-delete-note :: NodeId -> IO ()
+bd-set-note :: NodeId -> Text -> IO ()
 
 bd-list-metadata :: NodeId -> IO [MetaDataKey]
 bd-get-metadata :: NodeId -> MetaDataKey -> IO Text
