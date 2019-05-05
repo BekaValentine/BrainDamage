@@ -7,35 +7,35 @@ Each item gets a directory. Content goes in `content.<extension>`, title and oth
 # Shell Commands
 
 ```
-make-node :: Name -> IO NodeId
-delete-node :: NodeId -> IO ()
+bd-make-node :: Name -> IO NodeId
+bd-delete-node :: NodeId -> IO ()
 
-get-node-note :: NodeId -> IO Text
-delete-node-note :: NodeId -> IO ()
-set-node-note :: NodeId -> Text -> IO ()
+bd-get-node-note :: NodeId -> IO Text
+bd-delete-node-note :: NodeId -> IO ()
+bd-set-node-note :: NodeId -> Text -> IO ()
 
-list-metadata :: NodeId -> IO [MetaDataKey]
-get-metadata :: NodeId -> MetaDataKey -> IO Text
-set-metadata :: NodeId -> MetaDataKey -> Text -> IO ()
-delete-metadata :: NodeId -> MetaDataKey -> IO ()
+bd-list-metadata :: NodeId -> IO [MetaDataKey]
+bd-get-metadata :: NodeId -> MetaDataKey -> IO Text
+bd-set-metadata :: NodeId -> MetaDataKey -> Text -> IO ()
+bd-delete-metadata :: NodeId -> MetaDataKey -> IO ()
 
-add-attachment :: NodeId -> FilePath -> IO ()
-link-attachment :: NodeId -> FilePath -> IO ()
-delete-attachment :: NodeId -> FilePath -> IO ()
+bd-add-attachment :: NodeId -> FilePath -> IO ()
+bd-link-attachment :: NodeId -> FilePath -> IO ()
+bd-delete-attachment :: NodeId -> FilePath -> IO ()
 
-make-parent-child :: NodeId -> NodeId -> IO ParentChildId
-delete-parent-child :: NodeId -> NodeId -> ParentChildId -> IO ()
-list-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> IO [MetaDataKey]
-get-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> IO Text
-set-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> Text -> IO ()
-delete-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> IO ()
+bd-make-parent-child :: NodeId -> NodeId -> IO ParentChildId
+bd-delete-parent-child :: NodeId -> NodeId -> ParentChildId -> IO ()
+bd-list-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> IO [MetaDataKey]
+bd-get-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> IO Text
+bd-set-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> Text -> IO ()
+bd-delete-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaDataKey -> IO ()
 
-make-friends :: NodeId -> NodeId -> IO FriendsId
-delete-friends :: NodeId -> NodeId -> FriendsId -> IO ()
-list-friendsd-metadata :: NodeId -> NodeId -> FriendsId -> IO [MetaDataKey]
-get-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO Text
-set-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> Text -> IO ()
-delete-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO ()
+bd-make-friends :: NodeId -> NodeId -> IO FriendsId
+bd-delete-friends :: NodeId -> NodeId -> FriendsId -> IO ()
+bd-list-friendsd-metadata :: NodeId -> NodeId -> FriendsId -> IO [MetaDataKey]
+bd-get-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO Text
+bd-set-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> Text -> IO ()
+bd-delete-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO ()
 ```
 
 # Main Interactions
