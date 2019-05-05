@@ -9,6 +9,8 @@ Each item gets a directory. Content goes in `content.<extension>`, title and oth
 ```
 make-node :: Name -> IO NodeId
 delete-node :: NodeId -> IO ()
+get-node-note :: NodeId -> IO Text
+delete-node-note :: NodeId -> IO ()
 set-node-note :: NodeId -> Text -> IO ()
 list-metadata :: NodeId -> IO [MetaDataKey]
 get-metadata :: NodeId -> MetaDataKey -> IO Text
