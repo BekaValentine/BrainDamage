@@ -35,7 +35,7 @@ bd-delete-parent-child-metadata :: NodeId -> NodeId -> ParentChildId -> MetaData
 bd-make-friends :: NodeId -> NodeId -> IO FriendsId
 bd-delete-friends :: NodeId -> NodeId -> FriendsId -> IO ()
 bd-list-friends :: NodeId -> IO [NodeId]
-bd-list-friendsd-metadata :: NodeId -> NodeId -> FriendsId -> IO [MetaDataKey]
+bd-list-friends-metadata :: NodeId -> NodeId -> FriendsId -> IO [MetaDataKey]
 bd-get-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO Text
 bd-set-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> Text -> IO ()
 bd-delete-friends-metadata :: NodeId -> NodeId -> FriendsId -> MetaDataKey -> IO ()
